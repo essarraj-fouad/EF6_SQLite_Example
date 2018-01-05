@@ -13,8 +13,7 @@ namespace ConsoleApp2
 {
     class DatabaseContext : DbContext
     {
-        public DatabaseContext() :
-            base(new SQLiteConnection()
+        public DatabaseContext() : base(new SQLiteConnection()
             {
                 ConnectionString = new SQLiteConnectionStringBuilder() { DataSource = "test.db", ForeignKeys = true }.ConnectionString
             },true)
